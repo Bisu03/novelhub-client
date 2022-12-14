@@ -11,7 +11,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 export default function Home() {
   return (
     <>
-      <div className=" bg-skin-backgroud px-20 py-3 ">
+      <div className=" bg-skin-backgroud  py-3 ">
         <div className="pt-20"></div>
         <Swiper
           spaceBetween={30}
@@ -24,31 +24,115 @@ export default function Home() {
             clickable: true,
           }}
           // navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper">
+          modules={[Autoplay, Pagination, Navigation]}>
           <SwiperSlide>
-            <div className="w-full h-60  ">
+            <Image
+              src="https://placeimg.com/300/300/arch"
+              width={2000}
+              height={500}
+              className=" object-cover fixed blur-sm opacity-50 -z-10 "
+            />
+
+            <div className=" flex justify-between h-auto w-full px-20 py-4 ">
               <Image
-                src="/1st.jpg"
-                width={5000}
-                height={1000}
-                className="object-cover"
+                src="https://placeimg.com/300/300/arch"
+                width={300}
+                height={500}
+                className=" object-cover rounded-xl "
               />
+
+              <div className="card-body">
+                <h2 className="card-title text-5xl ">Star Odyssey</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Dignissimos ex autem quidem quisquam dolores illum ab eum
+                  beatae? Tenetur, asperiores accusantium. Numquam harum
+                  voluptatibus, accusantium fuga cum velit eius illo illum
+                  delectus, nemo doloremque veniam nisi magnam. Nulla eveniet
+                  iure fugiat dolorum veritatis voluptatum quae magni
+                  praesentium consectetur fuga. Commodi.
+                </p>
+                <div className="card-actions justify-end">
+                  <button className="btn glass btn-wide rounded-full">
+                    Read
+                  </button>
+                </div>
+              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="w-full h-60">
+            <Image
+              src="https://placeimg.com/300/300/arch"
+              width={2000}
+              height={500}
+              className=" object-cover fixed blur-sm opacity-50 -z-10 "
+            />
+
+            <div className=" flex justify-between h-auto w-full px-20 py-4 ">
               <Image
-                src="/2nd.jpg"
-                width={5000}
-                height={1000}
-                className="object-cover  "
+                src="https://placeimg.com/300/300/arch"
+                width={300}
+                height={500}
+                className=" object-cover rounded-xl "
               />
+
+              <div className="card-body">
+                <h2 className="card-title text-5xl ">Star Odyssey</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Dignissimos ex autem quidem quisquam dolores illum ab eum
+                  beatae? Tenetur, asperiores accusantium. Numquam harum
+                  voluptatibus, accusantium fuga cum velit eius illo illum
+                  delectus, nemo doloremque veniam nisi magnam. Nulla eveniet
+                  iure fugiat dolorum veritatis voluptatum quae magni
+                  praesentium consectetur fuga. Commodi.
+                </p>
+                <div className="card-actions justify-end">
+                  <button className="btn glass btn-wide rounded-full">
+                    Read
+                  </button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              src="https://placeimg.com/300/300/arch"
+              width={2000}
+              height={500}
+              className=" object-cover fixed blur-sm opacity-50 -z-10 "
+            />
+
+            <div className=" flex justify-between h-auto w-full px-20 py-4 ">
+              <Image
+                src="https://placeimg.com/300/300/arch"
+                width={300}
+                height={500}
+                className=" object-cover rounded-xl "
+              />
+
+              <div className="card-body">
+                <h2 className="card-title text-5xl ">Star Odyssey</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Dignissimos ex autem quidem quisquam dolores illum ab eum
+                  beatae? Tenetur, asperiores accusantium. Numquam harum
+                  voluptatibus, accusantium fuga cum velit eius illo illum
+                  delectus, nemo doloremque veniam nisi magnam. Nulla eveniet
+                  iure fugiat dolorum veritatis voluptatum quae magni
+                  praesentium consectetur fuga. Commodi.
+                </p>
+                <div className="card-actions justify-end">
+                  <button className="btn glass btn-wide rounded-full">
+                    Read
+                  </button>
+                </div>
+              </div>
             </div>
           </SwiperSlide>
         </Swiper>
 
-        <div className=" w-full flex justify-between items-center mt-10 ">
+        <div className=" w-full flex justify-between items-center mt-10 px-20 ">
           <div className="text-skin-grey text-2xl font-semibold ">
             <h1>Announcement</h1>
           </div>
@@ -57,7 +141,7 @@ export default function Home() {
           </div>
         </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque odit consectetur animi amet, earum accusamus quae ad consequatur eveniet quidem commodi ipsum officia nihil suscipit velit vitae! Quis quam magnam vel officia impedit eaque voluptatum itaque illo! Alias atque a eius tempora quaerat quam dolorum. Ea doloribus nemo eveniet, sapiente voluptates illum at, doloremque nam dicta inventore excepturi. Similique velit dicta ipsam harum debitis. Vero dolor sit laborum sed iste cum ex magnam quas laudantium, atque voluptatum ab sequi blanditiis perferendis repudiandae recusandae quia minima! Animi ipsum laudantium obcaecati adipisci harum, tempora esse ducimus. Quod voluptatem architecto cumque fugit, magni eaque aliquam error optio in doloribus delectus praesentium sed consectetur, alias, eum earum ut fuga esse tenetur quas voluptas. In similique nihil aspernatur laboriosam. Aspernatur nam nihil nulla incidunt, magnam harum, minima numquam earum alias beatae odit laudantium hic repellendus ullam obcaecati, quod neque sint vel ea. Quo neque quibusdam quia alias quam consequatur qui illum consectetur debitis. Aperiam repellat, quaerat, consectetur quos, aut modi officiis quis inventore deleniti adipisci labore! Numquam voluptatum accusamus officiis temporibus impedit repellat esse quae autem rerum dolorum a laboriosam distinctio commodi, optio consectetur nobis dignissimos deserunt aspernatur dolor sunt illum voluptatibus? Aperiam possimus minus, ab reiciendis hic voluptate at nam molestiae. Dolore optio aliquid, tenetur nostrum reprehenderit error porro. Assumenda quis consequatur consequuntur, deleniti, officiis minus iusto itaque aperiam dicta dolores eligendi ut nobis odit cum culpa nulla voluptas beatae! Assumenda animi voluptatum perferendis. Illo, accusantium animi necessitatibus eos, quas illum labore facilis odit sequi, veniam nulla dicta. Provident atque exercitationem dicta ducimus aliquid repellendus a. Odio nihil consequatur eius minus corporis aliquid fugit. Sequi, mollitia magni velit eum ex cum voluptas sunt assumenda architecto at non aperiam autem nihil, tempora rem labore. Minima hic exercitationem quibusdam doloribus. Dolorum perspiciatis corrupti exercitationem voluptatem modi nam minus maxime, fugiat, pariatur beatae consequuntur officiis sed eos. Vitae, excepturi est voluptas hic placeat quo ullam nam maiores minima voluptate amet illum suscipit unde natus dignissimos labore quaerat quam laboriosam sunt culpa voluptates qui itaque. Dolorum ut odio eum dolores doloremque laborum architecto optio, ad officia dolore, ducimus necessitatibus facilis eos. Quam odit provident sit officiis quidem nostrum fuga nobis ratione beatae soluta quasi tenetur illo recusandae et, veniam deleniti dolores harum incidunt cupiditate consequuntur iste in est! Voluptatum nihil minima explicabo voluptatibus numquam porro? Tempore provident, debitis quas pariatur optio cumque. Temporibus sapiente quibusdam similique, unde iusto dolor modi. Impedit est eligendi alias possimus libero consequatur placeat, vero sequi iure nobis quos quo ipsum? Atque aperiam perspiciatis fugiat minima? Ab ad vitae nam perspiciatis tempora fugiat voluptates beatae magnam harum eum nemo in molestiae ducimus aut asperiores, assumenda necessitatibus, aliquam placeat cumque quo consequuntur. Illum inventore, cum consequatur dolorem soluta enim facilis asperiores, ducimus assumenda amet dolores explicabo culpa cumque magnam a, eaque qui! Molestias repudiandae optio maiores expedita ducimus veniam! Reprehenderit aliquam consectetur suscipit autem harum sunt iste illum. Eos laudantium omnis quia molestias quisquam possimus. Nisi illo recusandae, vel dolores excepturi voluptatum iusto deleniti aliquam.</p>
+        
       </div>
     </>
   );

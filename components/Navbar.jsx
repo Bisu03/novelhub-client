@@ -65,10 +65,13 @@ const Navbar = () => {
 
           <div className="flex  w-full pl-5">
             <div className=" text-lg font-medium h-full p-1  cursor-pointer">
-              <span className="text-skin-base ">Series</span>
+              <span className="text-skin-base ">Category</span>
             </div>
             <div className="text-lg font-medium h-full p-1 pl-3 cursor-pointer">
-              <span className="text-skin-base ">Bookmark</span>
+              <span className="text-skin-base ">Author</span>
+            </div>
+            <div className="text-lg font-medium h-full p-1 pl-3 cursor-pointer">
+              <span className="text-skin-base ">Ranking</span>
             </div>
             <div className="text-lg font-medium h-full p-1 pl-3 cursor-pointer">
               <div className=" dropdown dropdown-hover ">
@@ -81,7 +84,7 @@ const Navbar = () => {
                   tabIndex={0}
                   className="dropdown-content bg-skin-color7 menu p-2 shadow rounded-box w-52">
                   <li>
-                    <a className="text-skin-base text-base">Category</a>
+                    <a className="text-skin-base text-base">Bookmark</a>
                   </li>
                   <li>
                     <a className="text-skin-base text-base">All Novels</a>
@@ -104,21 +107,23 @@ const Navbar = () => {
                 <input
                   type="Search"
                   placeholder="Search for Topic, Author, Novel.."
-                  className={` mx-3 ${InputWidth ? " w-64":" w-16"}  text-skin-base bg-skin-color7 border-none ease-in-out duration-300 outline-none`}
+                  className={` mx-3 ${
+                    InputWidth ? " w-64" : " w-16"
+                  }  text-skin-base bg-skin-color7 border-none ease-in-out duration-300 outline-none`}
                 />
               </div>
             </Link>
 
-            <div data-tip="notification" className="tooltip tooltip-bottom justify-center cursor-pointer indicator flex border-none bg-skin-color7 w-auto rounded-full p-2">
+            <div
+              data-tip="notification"
+              className="tooltip tooltip-bottom justify-center cursor-pointer indicator flex border-none bg-skin-color7 w-auto rounded-full p-2">
               <span className="  top-2  indicator-item indicator-top indicator-end badge badge-accent">
                 9
               </span>
               <MdNotifications className="text-skin-base h-6 w-6 " />
             </div>
-            <div data-tip="Mode" className="tooltip tooltip-bottom justify-center flex border-none cursor-pointer bg-skin-color7 w-auto rounded-full p-2">
-              <BsFillSunFill className="text-skin-yello h-6 w-6 " />
-            </div>
-            <div data-tip="Profile menu" 
+            <div
+              data-tip="Profile menu"
               className="tooltip tooltip-bottom justify-center flex border-none bg-skin-color7 cursor-pointer w-auto rounded-full p-2"
               onClick={() => setShow(!show)}>
               <FaUser className="text-skin-base h-6 w-6 " />
@@ -172,6 +177,12 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a>Logout</a>
+                  </li>
+                  <li>
+                    <a className=" flex w-full justify-between  border-none cursor-pointer bg-skin-color7 ">
+                      <p>Mode</p>
+                      <input data-tip="Dark"  type="checkbox" className="tooltip tooltip-bottom toggle" />
+                    </a>
                   </li>
                 </ul>
               </div>
