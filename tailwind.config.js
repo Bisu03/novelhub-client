@@ -17,6 +17,7 @@ module.exports = {
           base: "var(--color-secondary)",
           muted: "var(--color5)",
           red: "var(--color6)",
+          grey: "var(--color7)",
           yello: "var(--color8)",
           inverted: "var(--color-primary)",
         },
@@ -43,6 +44,6 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: false,
+    themes: true,
   },
 };
