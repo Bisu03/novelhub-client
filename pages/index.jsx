@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { FaBullhorn } from "react-icons/fa";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -133,15 +135,134 @@ export default function Home() {
         </Swiper>
 
         <div className=" w-full flex justify-between items-center mt-10 px-20 ">
-          <div className="text-skin-grey text-2xl font-semibold ">
+          <div className="text-skin-base text-2xl font-semibold ">
             <h1>Announcement</h1>
           </div>
-          <div className="text-skin-base font-semibold">
+          <div className="text-skin-grey font-semibold">
             <p>View All</p>
           </div>
         </div>
 
-        
+        <div className="px-20 mt-5">
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={20}
+            // pagination={{
+            //   clickable: true,
+            // }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+              },
+            }}
+            modules={[Pagination]}>
+            <SwiperSlide>
+              <div class="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+                <div className="h-14 w-14 flex items-center resize-none">
+                  <Image
+                    src="https://placeimg.com/180/180/arch"
+                    width={180}
+                    height={180}
+                    className="rounded-full object-cover resize-none "
+                  />
+                </div>
+                <div className=" w-full ml-4 ">
+                  <h1 className="w-auto text-skin-base ">server maintenance</h1>
+                  <p className="text-xs"> 1day ago</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+                <div className="h-14 w-14 flex items-center resize-none">
+                  <Image
+                    src="https://placeimg.com/180/180/arch"
+                    width={180}
+                    height={180}
+                    className="rounded-full object-cover resize-none "
+                  />
+                </div>
+                <div className=" w-full ml-4 ">
+                  <h1 className="w-auto text-skin-base ">server maintenance</h1>
+                  <p className="text-xs"> 1day ago</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+                <div className="h-14 w-14 flex items-center resize-none">
+                  <Image
+                    src="https://placeimg.com/180/180/arch"
+                    width={180}
+                    height={180}
+                    className="rounded-full object-cover resize-none "
+                  />
+                </div>
+                <div className=" w-full ml-4 ">
+                  <h1 className="w-auto text-skin-base ">server maintenance</h1>
+                  <p className="text-xs"> 1day ago</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+                <div className="h-14 w-14 flex items-center resize-none">
+                  <Image
+                    src="https://placeimg.com/180/180/arch"
+                    width={180}
+                    height={180}
+                    className="rounded-full object-cover resize-none "
+                  />
+                </div>
+                <div className=" w-full ml-4 ">
+                  <h1 className="w-auto text-skin-base ">server maintenance</h1>
+                  <p className="text-xs"> 1day ago</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+                <div className="h-14 w-14 flex items-center resize-none">
+                  <Image
+                    src="https://placeimg.com/180/180/arch"
+                    width={180}
+                    height={180}
+                    className="rounded-full object-cover resize-none "
+                  />
+                </div>
+                <div className=" w-full ml-4 ">
+                  <h1 className="w-auto text-skin-base ">server maintenance</h1>
+                  <p className="text-xs"> 1day ago</p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div class="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+                <div className="h-14 w-14 flex items-center resize-none">
+                  <Image
+                    src="https://placeimg.com/180/180/arch"
+                    width={180}
+                    height={180}
+                    className="rounded-full object-cover resize-none "
+                  />
+                </div>
+                <div className=" w-full ml-4 ">
+                  <h1 className="w-auto text-skin-base ">server maintenance</h1>
+                  <p className="text-xs"> 1day ago</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </>
   );
