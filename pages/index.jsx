@@ -8,7 +8,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
+import Books from "../components/Books";
 
 export default function Home() {
   return (
@@ -17,16 +18,17 @@ export default function Home() {
         <div className="pt-20"></div>
         <Swiper
           spaceBetween={30}
+          effect={"fade"}
           centeredSlides={true}
           autoplay={{
-            delay: 3500,
+            delay: 2500,
             disableOnInteraction: false,
           }}
           pagination={{
             clickable: true,
           }}
           // navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}>
+          modules={[EffectFade, Autoplay, Pagination, Navigation]}>
           <SwiperSlide>
             <Image
               src="https://placeimg.com/300/300/arch"
@@ -44,7 +46,7 @@ export default function Home() {
               />
 
               <div className="card-body">
-                <h2 className="card-title text-5xl ">Star Odyssey</h2>
+                <h2 className="card-title text-5xl text-skin-base ">Star Odyssey</h2>
                 <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Dignissimos ex autem quidem quisquam dolores illum ab eum
@@ -143,7 +145,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="px-20 mt-5">
+        <div className="px-20 mt-5 flex justify-center ">
           <Swiper
             slidesPerView={4}
             spaceBetween={20}
@@ -151,6 +153,10 @@ export default function Home() {
             //   clickable: true,
             // }}
             breakpoints={{
+              300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
               640: {
                 slidesPerView: 2,
                 spaceBetween: 20,
@@ -166,7 +172,7 @@ export default function Home() {
             }}
             modules={[Pagination]}>
             <SwiperSlide>
-              <div class="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+              <div className="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
                 <div className="h-14 w-14 flex items-center resize-none">
                   <Image
                     src="https://placeimg.com/180/180/arch"
@@ -198,7 +204,7 @@ export default function Home() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div class="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+              <div className="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
                 <div className="h-14 w-14 flex items-center resize-none">
                   <Image
                     src="https://placeimg.com/180/180/arch"
@@ -214,7 +220,7 @@ export default function Home() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div class="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+              <div className="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
                 <div className="h-14 w-14 flex items-center resize-none">
                   <Image
                     src="https://placeimg.com/180/180/arch"
@@ -230,7 +236,7 @@ export default function Home() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div class="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+              <div className="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
                 <div className="h-14 w-14 flex items-center resize-none">
                   <Image
                     src="https://placeimg.com/180/180/arch"
@@ -246,7 +252,7 @@ export default function Home() {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div class="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
+              <div className="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
                 <div className="h-14 w-14 flex items-center resize-none">
                   <Image
                     src="https://placeimg.com/180/180/arch"
@@ -260,6 +266,112 @@ export default function Home() {
                   <p className="text-xs"> 1day ago</p>
                 </div>
               </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+
+        <div className=" w-full flex justify-between items-center mt-10 px-20 ">
+          <div className="text-skin-base text-2xl font-semibold ">
+            <h1>New Arrivals</h1>
+          </div>
+          <div className="text-skin-grey font-semibold">
+            {/* <p>View All</p> */}
+          </div>
+        </div>
+
+        <div className="px-20 mt-5 flex justify-center w-full">
+          <Swiper
+            slidesPerView={7}
+            spaceBetween={20}
+            // pagination={{
+            //   clickable: true,
+            // }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 7,
+                spaceBetween: 40,
+              },
+            }}
+            modules={[Autoplay, Pagination]}>
+            <SwiperSlide>
+              <Books
+                title="Necropolis Immortal"
+                score="7.2"
+                status="ongoing"
+                tags="fantacy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Books
+                title="Necropolis Immortal"
+                score="7.2"
+                status="ongoing"
+                tags="fantacy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Books
+                title="Necropolis Immortal"
+                score="7.2"
+                status="ongoing"
+                tags="fantacy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Books
+                title="Necropolis Immortal"
+                score="7.2"
+                status="ongoing"
+                tags="fantacy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Books
+                title="Necropolis Immortal"
+                score="7.2"
+                status="ongoing"
+                tags="fantacy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Books
+                title="Necropolis Immortal"
+                score="7.2"
+                status="ongoing"
+                tags="fantacy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Books
+                title="Necropolis Immortal"
+                score="7.2"
+                status="ongoing"
+                tags="fantacy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Books
+                title="Necropolis Immortal"
+                score="7.2"
+                status="ongoing"
+                tags="fantacy"
+              />
             </SwiperSlide>
           </Swiper>
         </div>
