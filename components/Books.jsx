@@ -14,14 +14,16 @@ const Books = ({ status, score, title, tags }) => {
               <p className="text-xs text-skin-base p-1 ">{status}</p>
             </div>
           )}
-          <div
-            className="radial-progress text-xs absolute right-2 bottom-2 text-skin-inverted"
-            style={{
-              "--value": `${score*10}`,
-              "--size": "30px",
-              "--thickness": "3px",
-            }}>
-            {score}
+          <div className="absolute right-2 bottom-2  rounded-full bg-skin-color7 p-[2px] ">
+            <div
+              className="radial-progress text-xs  text-skin-yello"
+              style={{
+                "--value": `${score * 10}`,
+                "--size": "30px",
+                "--thickness": "3px",
+              }}>
+              {score}
+            </div>
           </div>
           <Image
             src="/necro.jpg"
