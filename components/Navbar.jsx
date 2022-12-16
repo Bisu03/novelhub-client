@@ -48,11 +48,11 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed flex flex-wrap items-center justify-between lg:py-3 py-1.5  ${
+        className={`fixed flex    items-center justify-between lg:py-3 py-1.5  ${
           colorChange ? "navbar-glassmorphism" : "bg-skin-color4"
         } w-full z-[1000] `}>
         <div className="flex justify-between items-center w-full container mx-auto px-18">
-          <div className="lg:text-3xl text-xl h-full p-1 w-48 cursor-pointer">
+          <div className="lg:text-3xl text-2xl h-full p-1 w-48 cursor-pointer">
             <Link href={"/"}>
               <span className="text-skin-base font-semibold font-mono">
                 Web
@@ -63,7 +63,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="flex  w-full pl-5">
+          <div className="lg:flex md:flex hidden  w-full pl-5">
             <div className=" text-lg font-medium h-full p-1  cursor-pointer">
               <span className="text-skin-base ">Category</span>
             </div>
@@ -99,7 +99,7 @@ const Navbar = () => {
             ref={ref}>
             <Link href="/search">
               <div
-                className="justify-center flex border-none bg-skin-color7 w-auto rounded-full p-1"
+                className="justify-center  lg:flex md:flex hidden border-none bg-skin-color7 w-auto rounded-full p-1"
                 onClick={HandleExtend}>
                 <div className="content-center grid text-skin-base bg-skin-color7 ml-3 p-2">
                   <FaSearch />
@@ -127,6 +127,31 @@ const Navbar = () => {
               className="tooltip tooltip-bottom justify-center flex border-none bg-skin-color7 cursor-pointer w-auto rounded-full p-2"
               onClick={() => setShow(!show)}>
               <FaUser className="text-skin-base h-6 w-6 " />
+            </div>
+            <div
+              data-tip="Menu"
+              className="tooltip tooltip-bottom justify-center flex lg:hidden md:hidden border-none bg-skin-color7 cursor-pointer w-auto rounded-full p-2"
+              onClick={() => setShow(!show)}>
+              <label className=" swap swap-rotate bg-skin-color7 cursor-pointer h-6 w-6">
+                <input type="checkbox" />
+                <svg
+                  className="swap-off fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 512 512">
+                  <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                </svg>
+
+                <svg
+                  className="swap-on fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 512 512">
+                  <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+                </svg>
+              </label>
             </div>
             <>
               {/* <div
