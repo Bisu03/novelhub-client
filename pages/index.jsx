@@ -11,14 +11,19 @@ import "swiper/css/navigation";
 import { EffectFade, Autoplay, Pagination, Navigation } from "swiper";
 import Books from "../components/Books";
 import Slider from "../components/Slider";
+import Box from "../components/Box";
 
 export default function Home({ color }) {
   return (
     <>
-      <div className={` ${color == "Dark" ? "bg-skin-backgroud" : "bg-skin-secondary"}  py-3 `}>
+      <div
+        className={` ${
+          color == "Dark" ? "bg-skin-backgroud" : "bg-skin-secondary"
+        }  py-3 `}>
         <div className="pt-[2.5rem] lg:pt-[3rem]"></div>
         <Slider />
 
+        {/* announcement  */}
         <div className=" w-full flex justify-between items-center mt-10 container">
           <div className="text-skin-base text-2xl font-semibold ">
             <h1>Announcement</h1>
@@ -28,7 +33,7 @@ export default function Home({ color }) {
           </div>
         </div>
 
-        <div className="px-20 mt-5 flex justify-center ">
+        <div className="container  mt-5 flex justify-center ">
           <Swiper
             slidesPerView={4}
             spaceBetween={20}
@@ -56,24 +61,12 @@ export default function Home({ color }) {
             modules={[Pagination]}
             className="w-full">
             <SwiperSlide>
-              <div className="flex flex-row items-center bg-skin-color4 rounded-3xl p-4 w-[100%] ">
-                <div className="h-14 w-14 flex items-center resize-none">
-                  <Image
-                    src="https://placeimg.com/180/180/arch"
-                    width={180}
-                    height={180}
-                    className="rounded-full object-cover resize-none "
-                  />
-                </div>
-                <div className=" w-full ml-4 ">
-                  <h1 className="w-auto text-skin-base ">server maintenance</h1>
-                  <p className="text-xs"> 1day ago</p>
-                </div>
-              </div>
+              <Box />
             </SwiperSlide>
           </Swiper>
         </div>
 
+        {/* 1st slider  */}
         <div className=" w-full flex justify-between items-center mt-10 container ">
           <div className="text-skin-base text-2xl font-semibold ">
             <h1>New Arrivals</h1>
@@ -83,7 +76,7 @@ export default function Home({ color }) {
           </div>
         </div>
 
-        <div className="px-20 mt-5 flex justify-center w-full">
+        <div className="container mt-5">
           <Swiper
             slidesPerView={7}
             spaceBetween={20}
@@ -96,8 +89,8 @@ export default function Home({ color }) {
             }}
             breakpoints={{
               300: {
-                slidesPerView: 1,
-                spaceBetween: 20,
+                slidesPerView: 2,
+                spaceBetween: 5,
               },
               640: {
                 slidesPerView: 1,

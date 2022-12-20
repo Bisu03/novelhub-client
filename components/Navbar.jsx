@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const Navbar = ({ color, HandleColorChange }) => {
+  const [menu, setMenu] = useState(false);
   const [show, setShow] = useState(false);
   const [colorChange, setColorchange] = useState(false);
   const [InputWidth, setInputWidth] = useState(false);
@@ -33,9 +34,17 @@ const Navbar = ({ color, HandleColorChange }) => {
     const checkIfClickedOutside = (e) => {
       if (show && ref.current && !ref.current.contains(e.target)) {
         setShow(false);
+        setMenu(false);
         setInputWidth(false);
       }
       if (InputWidth && ref.current && !ref.current.contains(e.target)) {
+        setShow(false);
+        setMenu(false);
+        setInputWidth(false);
+      }
+      if (menu && ref.current && !ref.current.contains(e.target)) {
+        setShow(false);
+        setMenu(false);
         setInputWidth(false);
       }
     };
@@ -43,7 +52,7 @@ const Navbar = ({ color, HandleColorChange }) => {
     return () => {
       document.removeEventListener("click", checkIfClickedOutside);
     };
-  }, [show, InputWidth]);
+  }, [show, InputWidth, menu]);
 
   return (
     <>
@@ -52,7 +61,7 @@ const Navbar = ({ color, HandleColorChange }) => {
           color == "Dark"
             ? colorChange
               ? "navbar-glassmorphismdark"
-              : "bg-skin-color4"
+              : "bg-skin-backgroud  "
             : colorChange
             ? "navbar-glassmorphismlight"
             : "bg-skin-secondary"
@@ -159,10 +168,9 @@ const Navbar = ({ color, HandleColorChange }) => {
             </div>
             <div
               data-tip="Menu"
-              className="tooltip tooltip-bottom justify-center flex lg:hidden md:hidden border-none bg-skin-color7 cursor-pointer w-auto rounded-full p-2"
-              onClick={() => setShow(!show)}>
+              className="tooltip tooltip-bottom justify-center flex lg:hidden md:hidden border-none bg-skin-color7 cursor-pointer w-auto rounded-full p-2">
               <label className=" swap swap-rotate bg-skin-color7 cursor-pointer h-6 w-6">
-                <input type="checkbox" />
+                <input type="checkbox" onClick={() => setMenu(!menu)} />
                 <svg
                   className="swap-off fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -257,6 +265,30 @@ const Navbar = ({ color, HandleColorChange }) => {
                         </svg>
                       </label>
                     </a>
+                  </li>
+                </ul>
+              </div>
+            )}
+            {menu && (
+              <div
+                className={`absolute h-auto w-auto ${
+                  color == "Dark" ? " bg-skin-color7" : " bg-skin-secondary"
+                }  top-12 lg:top-16 md:top-16 rounded-2xl`}>
+                <ul
+                  className={`menu menu-compact  lg:menu-normal w-56 p-2 rounded-box ${
+                    color == "Dark" ? "text-skin-base " : "text-skin-grey "
+                  } `}>
+                  <li>
+                    <a>Bookmark</a>
+                  </li>
+                  <li>
+                    <a>Ranking</a>
+                  </li>
+                  <li>
+                    <a>Author</a>
+                  </li>
+                  <li>
+                    <a>Category</a>
                   </li>
                 </ul>
               </div>

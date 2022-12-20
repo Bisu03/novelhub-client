@@ -44,7 +44,7 @@ a {
     /* border-radius: 10px; */
   }
   .navbar-glassmorphismdark {
-    background: rgba(35, 34, 38, 0.85);
+    background: #111827a6;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
@@ -54,14 +54,15 @@ a {
 
 @layer base {
   :root {
-    --color-backgroud: #111111;
+    --color-backgroud: #111827;
     --color-primary: #0061ff;
     --color-secondary: #ffffff;
-    --color4: #232226;
+    --color4: #050a14;
     --color5: #bebebe;
     --color6: #fd3333;
-    --color7: #3d3d46;
+    --color7: #2e3647;
     --color8: #FBBD23;
+    --color9: #94a3b8;
   }
 }
 

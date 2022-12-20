@@ -32,6 +32,7 @@ module.exports = {
           color6: "var(--color6)",
           color7: "var(--color7)",
           color8: "var(--color8)",
+          color9: "var(--color9)",
         },
       },
       borderColor: {

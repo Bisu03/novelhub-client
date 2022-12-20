@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Navbar color={Color} HandleColorChange={HandleColorChange} />
-      <Component color={Color} {...pageProps} /> <Footer />
+      <Component color={Color} {...pageProps} /> <Footer color={Color} />
     </>
   );
 }
