@@ -24,6 +24,7 @@ module.exports = {
       },
       backgroundColor: {
         skin: {
+          greadient: "var(--color-greadient)",
           backgroud: "var(--color-backgroud)",
           primary: "var(--color-primary)",
           secondary: "var(--color-secondary)",

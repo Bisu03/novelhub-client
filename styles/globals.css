@@ -54,6 +54,7 @@ a {
 
 @layer base {
   :root {
+    --color-greadient:linear-gradient(135deg, #6B73FF 10%, #000DFF 100%);
     --color-backgroud: #111827;
     --color-primary: #0061ff;
     --color-secondary: #ffffff;
