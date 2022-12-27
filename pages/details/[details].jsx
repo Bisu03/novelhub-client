@@ -3,6 +3,7 @@ import React from "react";
 import { BsFillPersonFill, BsStarFill } from "react-icons/bs";
 import { BiWorld } from "react-icons/bi";
 import Comment from "../../components/Comment";
+import Link from "next/link";
 
 const details = () => {
   return (
@@ -176,9 +177,13 @@ const details = () => {
                 {/* <span className="title-font font-medium text-2xl text-white">
                   $58.00
                 </span> */}
-                <button className="flex ml-auto text-skin-base bg-skin-color7 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600  ease-in-out duration-300 rounded-xl">
-                  Start Reading
-                </button>
+                <Link
+                  href={"/books/booksname/id21231"}
+                  className="flex ml-auto">
+                  <button className=" text-skin-base bg-skin-color7 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600  ease-in-out duration-300 rounded-xl">
+                    Start Reading
+                  </button>
+                </Link>
                 <button className="rounded-full w-10 h-10 bg-gray-800 p-0 border-0 inline-flex items-center justify-center text-skin-base ml-4">
                   <svg
                     fill="currentColor"
@@ -213,11 +218,35 @@ const details = () => {
               <h1 className="text-2xl ">Rate Us</h1>
             </div>
             <div className="flex justify-center">
-              <BsStarFill className="w-12 h-12 ml-1 " />
-              <BsStarFill className="w-12 h-12 ml-1 " />
-              <BsStarFill className="w-12 h-12 ml-1 " />
-              <BsStarFill className="w-12 h-12 ml-1 " />
-              <BsStarFill className="w-12 h-12 ml-1 " />
+              <div className="rating rating-lg">
+                <input type="radio" name="rating-9" className="rating-hidden" />
+                <input
+                  type="radio"
+                  name="rating-9"
+                  className="mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-9"
+                  className="mask mask-star-2"
+                  checked
+                />
+                <input
+                  type="radio"
+                  name="rating-9"
+                  className="mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-9"
+                  className="mask mask-star-2"
+                />
+                <input
+                  type="radio"
+                  name="rating-9"
+                  className="mask mask-star-2"
+                />
+              </div>
             </div>
           </div>
           <div className="form-control pt-5 ">

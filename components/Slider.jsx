@@ -16,17 +16,17 @@ const Slider = () => {
     <div>
       <Swiper
         spaceBetween={30}
-        effect={"fade"}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
+          delay: 3500,
+          disableOnInteraction: true,
         }}
         pagination={{
           clickable: true,
         }}
         // navigation={true}
-        modules={[EffectFade, Autoplay, Pagination, Navigation]}>
+        modules={[ Autoplay, Pagination, Navigation]}>
+       
         <SwiperSlide>
           <Image
             src="/necro.jpg"
@@ -36,7 +36,7 @@ const Slider = () => {
             className=" object-cover fixed blur-md opacity-40 -z-10  "
           />
 
-          <div className=" flex  lg:flex-nowrap md:flex-nowrap flex-wrap lg:justify-between md:justify-between justify-center h-auto w-full px-20 py-4 ">
+          <div className=" flex relative  lg:flex-nowrap md:flex-nowrap flex-wrap lg:justify-between md:justify-between justify-center h-auto w-full px-20 py-4 ">
             <Image
               src="/necro.jpg"
               width={200}
@@ -69,16 +69,16 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Image
-            src="/necro.jpg"
+            src="https://placeimg.com/300/300/arch"
             width={2000}
             height={500}
             alt="image"
             className=" object-cover fixed blur-md opacity-40 -z-10  "
           />
 
-          <div className=" flex  lg:flex-nowrap md:flex-nowrap flex-wrap lg:justify-between md:justify-between justify-center h-auto w-full px-20 py-4 ">
+          <div className=" flex relative  lg:flex-nowrap md:flex-nowrap flex-wrap lg:justify-between md:justify-between justify-center h-auto w-full px-20 py-4 ">
             <Image
-              src="/necro.jpg"
+              src="https://placeimg.com/200/300/arch"
               width={200}
               height={200}
               alt="image"

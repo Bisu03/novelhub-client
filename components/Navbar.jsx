@@ -226,7 +226,10 @@ const Navbar = ({ color, HandleColorChange }) => {
                     color == "Dark" ? "text-skin-base " : "text-skin-grey "
                   } `}>
                   <li>
-                    <a>Profile</a>
+                    <Link href={"/"}>Home</Link>
+                  </li>
+                  <li>
+                    <Link href={"/profile/234234"}>Profile</Link>
                   </li>
                   <li>
                     <a>
@@ -240,7 +243,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                     <a>Setting</a>
                   </li>
                   <li>
-                    <a>Announcement</a>
+                    <Link href={"/announcement"}>Announcement</Link>
                   </li>
                   <li>
                     <a>Logout</a>
