@@ -81,7 +81,7 @@ const Navbar = ({ color, HandleColorChange }) => {
             </Link>
           </div>
 
-          <div
+          {/* <div
             className={`lg:flex md:flex hidden ${
               color == "Dark" ? "text-skin-base" : "text-skin-grey"
             }   w-full pl-5`}>
@@ -119,7 +119,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div
             className="flex justify-end items-center w-48 lg:w-full space-x-3 lg:space-x-4 md:space-x-8 "
@@ -166,7 +166,7 @@ const Navbar = ({ color, HandleColorChange }) => {
               onClick={() => setShow(!show)}>
               <FaUser className="text-skin-base h-6 w-6 " />
             </div>
-            <div
+            {/* <div
               data-tip="Menu"
               className="tooltip tooltip-bottom justify-center flex lg:hidden md:hidden border-none bg-skin-color7 cursor-pointer w-auto rounded-full p-2">
               <label className=" swap swap-rotate bg-skin-color7 cursor-pointer h-6 w-6">
@@ -189,7 +189,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                   <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
                 </svg>
               </label>
-            </div>
+            </div> */}
             <>
               {/* <div
                 className="flex items-center justify-center w-[34px] h-[34px] lg:w-[36px] lg:h-[36px] cursor-pointer"
@@ -246,6 +246,9 @@ const Navbar = ({ color, HandleColorChange }) => {
                     <Link href={"/announcement"}>Announcement</Link>
                   </li>
                   <li>
+                    <Link href={"/bookmarks"}>Bookmark</Link>
+                  </li>
+                  <li>
                     <a>Logout</a>
                   </li>
                   <li>
@@ -272,7 +275,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                 </ul>
               </div>
             )}
-            {menu && (
+            {/* {menu && (
               <div
                 className={`absolute h-auto w-auto ${
                   color == "Dark" ? " bg-skin-color7" : " bg-skin-secondary"
@@ -295,7 +298,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                   </li>
                 </ul>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </nav>

@@ -294,13 +294,13 @@ export default function Home({ color }) {
             </div>
           </div>
           <div className="flex  mt-4 ">
-            <button className="btn btn-md mr-2 border-skin-primary text-skin-inverted ">
+            <button className="btn btn-xs mr-2 border-skin-primary text-skin-inverted ">
               Most Popular
             </button>
-            <button className="btn btn-md mr-2 border-skin-primary text-skin-inverted ">
+            <button className="btn btn-xs mr-2 border-skin-primary text-skin-inverted ">
               New
             </button>
-            <button className="btn btn-md border-skin-primary text-skin-inverted ">
+            <button className="btn btn-xs border-skin-primary text-skin-inverted ">
               High Ranking
             </button>
           </div>
@@ -404,7 +404,6 @@ export default function Home({ color }) {
 
           {/* 4th sildes  */}
 
-          {/* 2st slider  */}
           <div className=" w-full flex justify-between items-center mt-10  ">
             <div className="text-skin-base text-2xl font-semibold ">
               <h1>Novel Just Compleated</h1>
