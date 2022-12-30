@@ -248,7 +248,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                   <li>
                     <a>Logout</a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a className=" flex w-full justify-between  border-none cursor-pointer  ">
                       <p>Mode</p>
                       <label className="swap swap-rotate">
@@ -268,7 +268,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                         </svg>
                       </label>
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             )}
