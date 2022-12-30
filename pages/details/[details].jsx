@@ -8,6 +8,7 @@ import {
 import { BiWorld } from "react-icons/bi";
 import Comment from "../../components/Comment";
 import Link from "next/link";
+import { AiFillLike, AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
 
 const details = () => {
   return (
@@ -50,57 +51,8 @@ const details = () => {
               </div>
               <div className="flex mb-4">
                 <span className="flex items-center">
-                  <svg
-                    fill="currentColor"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 text-skin-red"
-                    viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                  <svg
-                    fill="currentColor"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 text-skin-red"
-                    viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                  <svg
-                    fill="currentColor"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 text-skin-red"
-                    viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                  <svg
-                    fill="currentColor"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 text-skin-red"
-                    viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    className="w-4 h-4 text-skin-red"
-                    viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                  </svg>
-                  <span className="ml-3">4 Star</span>
+                  <AiFillLike className="w-5 h-5" />
+                  <span className="ml-2">400 </span>
                 </span>
                 <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-800 text-skin-base space-x-2">
                   <a>
@@ -199,6 +151,57 @@ const details = () => {
 
       {/* reviews */}
       <div className="bg-skin-backgroud relative container">
+        <div className="flex  pt-10 mb-5 ">
+          <button className="btn btn-md mr-2 border-skin-primary text-skin-inverted ">
+            About
+          </button>
+          <button className="btn btn-md mr-2 border-skin-primary text-skin-inverted ">
+            Chapters
+          </button>
+        </div>
+
+        <hr className="my-5" />
+
+        <div className=" w-full flex justify-between items-center ">
+          <div className="text-skin-base text-2xl font-semibold ">
+            <h1>About</h1>
+          </div>
+          <div className="text-skin-grey font-semibold">
+            {/* <p>View All</p> */}
+          </div>
+        </div>
+
+        <p className="leading-relaxed text-skin-base">
+          Fam locavore kickstarter distillery. Mixtape chillwave tumeric
+          sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps
+          cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine
+          tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean
+          shorts keytar banjo tattooed umami cardigan.
+        </p>
+
+        <div className="flex mt-6 items-center ">
+          <div className="flex items-center ">
+            <span className="mr-3 ">Tags:</span>
+            <div className="badge badge-outline mr-1 ">neutral</div>
+            <div className="badge badge-outline mr-1 ">neutral</div>
+            <div className="badge badge-outline mr-1 ">neutral</div>
+          </div>
+        </div>
+
+        <hr className="my-5" />
+
+        <div className=" w-full flex justify-between items-center ">
+          <div className="text-skin-base text-2xl font-semibold ">
+            <h1>Links</h1>
+          </div>
+          <div className="text-skin-grey font-semibold">
+            {/* <p>View All</p> */}
+          </div>
+        </div>
+        <p className="link link-primary">Discord: Discord.com/dicord</p>
+
+        <hr className="my-5" />
+
         <div className=" w-full flex justify-between items-center pt-10 ">
           <div className="text-skin-base text-2xl font-semibold ">
             <h1>Reviews</h1>
@@ -210,38 +213,15 @@ const details = () => {
 
         <div className="w-full bg-skin-color4 p-6 rounded-xl mt-2">
           <div className="flex justify-center flex-col mb-2 ">
-            <div className="flex justify-center text-skin-red ">
-              <h1 className="text-2xl ">Rate Us</h1>
+            <div className="flex justify-center text-skin-red mb-3">
+              <h1 className="text-2xl ">Like Us</h1>
             </div>
-            <div className="flex justify-center">
-              <div className="rating rating-lg">
-                <input type="radio" name="rating-9" className="rating-hidden" />
-                <input
-                  type="radio"
-                  name="rating-9"
-                  className="mask mask-star-2"
-                />
-                <input
-                  type="radio"
-                  name="rating-9"
-                  className="mask mask-star-2"
-                  checked
-                />
-                <input
-                  type="radio"
-                  name="rating-9"
-                  className="mask mask-star-2"
-                />
-                <input
-                  type="radio"
-                  name="rating-9"
-                  className="mask mask-star-2"
-                />
-                <input
-                  type="radio"
-                  name="rating-9"
-                  className="mask mask-star-2"
-                />
+            <div className="flex justify-center items-center">
+              <div className="rounded-full p-4 bg-skin-primary">
+                <AiOutlineLike className="h-8 w-8" />
+              </div>
+              <div className="rounded-full p-4 bg-skin-primary ml-5">
+                <AiOutlineDislike className="h-8 w-8  " />
               </div>
             </div>
           </div>

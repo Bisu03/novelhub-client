@@ -81,18 +81,15 @@ const Navbar = ({ color, HandleColorChange }) => {
             </Link>
           </div>
 
-          {/* <div
+          <div
             className={`lg:flex md:flex hidden ${
               color == "Dark" ? "text-skin-base" : "text-skin-grey"
             }   w-full pl-5`}>
-            <div className=" text-lg font-medium h-full p-1  cursor-pointer">
-              <span>Category</span>
-            </div>
             <div className="text-lg font-medium h-full p-1 pl-3 cursor-pointer">
               <span>Author</span>
             </div>
             <div className="text-lg font-medium h-full p-1 pl-3 cursor-pointer">
-              <span>Ranking</span>
+              <span>Bookmark</span>
             </div>
             <div className="text-lg font-medium h-full p-1 pl-3 cursor-pointer">
               <div className=" dropdown dropdown-hover ">
@@ -111,7 +108,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                       : "text-skin-grey bg-skin-secondary"
                   }  menu p-2 shadow rounded-box w-52`}>
                   <li>
-                    <a className=" text-base">Bookmark</a>
+                    <a className=" text-base">Ranking</a>
                   </li>
                   <li>
                     <a className=" text-base">All Novels</a>
@@ -119,7 +116,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                 </ul>
               </div>
             </div>
-          </div> */}
+          </div>
 
           <div
             className="flex justify-end items-center w-48 lg:w-full space-x-3 lg:space-x-4 md:space-x-8 "
@@ -275,7 +272,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                 </ul>
               </div>
             )}
-            {/* {menu && (
+            {menu && (
               <div
                 className={`absolute h-auto w-auto ${
                   color == "Dark" ? " bg-skin-color7" : " bg-skin-secondary"
@@ -298,7 +295,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                   </li>
                 </ul>
               </div>
-            )} */}
+            )}
           </div>
         </div>
       </nav>
