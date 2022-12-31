@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 const Navbar = ({ color, HandleColorChange }) => {
   const [menu, setMenu] = useState(false);
   const [show, setShow] = useState(false);
+  const [Notofication, setNotofication] = useState(false);
   const [colorChange, setColorchange] = useState(false);
   const [InputWidth, setInputWidth] = useState(false);
   const router = useRouter();
@@ -47,12 +48,18 @@ const Navbar = ({ color, HandleColorChange }) => {
         setMenu(false);
         setInputWidth(false);
       }
+      if (Notofication && ref.current && !ref.current.contains(e.target)) {
+        setShow(false);
+        setMenu(false);
+        setInputWidth(false);
+        setNotofication(false);
+      }
     };
     document.addEventListener("click", checkIfClickedOutside);
     return () => {
       document.removeEventListener("click", checkIfClickedOutside);
     };
-  }, [show, InputWidth, menu]);
+  }, [show, InputWidth, menu,Notofication]);
 
   return (
     <>
@@ -89,7 +96,7 @@ const Navbar = ({ color, HandleColorChange }) => {
               <span>Author</span>
             </div>
             <div className="text-lg font-medium h-full p-1 pl-3 cursor-pointer">
-              <span>Bookmark</span>
+            <Link href={"/bookmarks"}>Bookmark</Link>
             </div>
             <div className="text-lg font-medium h-full p-1 pl-3 cursor-pointer">
               <div className=" dropdown dropdown-hover ">
@@ -150,6 +157,7 @@ const Navbar = ({ color, HandleColorChange }) => {
             </Link>
 
             <div
+              onClick={() => setNotofication(!Notofication)}
               data-tip="notification"
               className="tooltip tooltip-bottom justify-center cursor-pointer indicator flex border-none bg-skin-color7 w-auto rounded-full p-2">
               <span className="  top-2  indicator-item indicator-top indicator-end badge badge-accent">
@@ -163,7 +171,7 @@ const Navbar = ({ color, HandleColorChange }) => {
               onClick={() => setShow(!show)}>
               <FaUser className="text-skin-base h-6 w-6 " />
             </div>
-            {/* <div
+            <div
               data-tip="Menu"
               className="tooltip tooltip-bottom justify-center flex lg:hidden md:hidden border-none bg-skin-color7 cursor-pointer w-auto rounded-full p-2">
               <label className=" swap swap-rotate bg-skin-color7 cursor-pointer h-6 w-6">
@@ -186,7 +194,7 @@ const Navbar = ({ color, HandleColorChange }) => {
                   <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
                 </svg>
               </label>
-            </div> */}
+            </div>
             <>
               {/* <div
                 className="flex items-center justify-center w-[34px] h-[34px] lg:w-[36px] lg:h-[36px] cursor-pointer"
@@ -293,6 +301,45 @@ const Navbar = ({ color, HandleColorChange }) => {
                   <li>
                     <a>Category</a>
                   </li>
+                </ul>
+              </div>
+            )}
+
+            {Notofication && (
+              <div
+                className={`absolute h-auto w-auto ${
+                  color == "Dark" ? " bg-skin-color7" : " bg-skin-secondary"
+                }  top-12 lg:top-16 md:top-16 rounded-2xl`}>
+                <ul className="menu w-60 rounded-xl">
+                  <div className="flex justify-center  pt-5  ">
+                    <button className="btn btn-xs mr-2 border-skin-primary text-skin-inverted ">
+                      Announcement
+                    </button>
+                    <button className="btn btn-xs mr-2 border-skin-primary text-skin-inverted ">
+                      Notification
+                    </button>
+                  </div>
+                  <div className="bg-skin-color6 mt-5 flex justify-center w-full ">
+                    <p>mark all readed</p>
+                  </div>
+
+                  <div className="h-full  flex  items-center   p-4 rounded-lg">
+                    <Image
+                      src="https://placeimg.com/180/180/arch"
+                      width={50}
+                      height={50}
+                      alt="image"
+                      className="rounded-full object-cover resize-none "
+                    />
+                    <div className="flex-grow ml-2 ">
+                      <h2 className="text-skin-base title-font font-medium text-sm ">
+                        Server Maintenance
+                      </h2>
+                      <p className="text-skin-inverted text-xs">
+                        posted 1day ago
+                      </p>
+                    </div>
+                  </div>
                 </ul>
               </div>
             )}
